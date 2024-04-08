@@ -9,11 +9,11 @@ A food delivery system chatbot
 New Order------------------Track order-----------------Offers/Store House       
 
      
-                            
-
+                        
+### Backlog
 
 New Order : 
-1. place new order
+1. Place new order
 2. Support payment through a chatbot
 
 Track order :
@@ -24,3 +24,11 @@ Offers/store house :
 1. Ongoing offers
 2. Upcoming offers
 3. Store house
+
+
+### MVP
+1. Place new order
+2. Track order by orderid
+
+
+
