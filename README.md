@@ -31,4 +31,10 @@ Offers/store house :
 2. Track order by orderid
 
 
+### Phase 2
+Support payment through a chatbot<br>
+Track order by customername<br>
+Ongoing offers<br>
+Upcoming offers<br>
+Store house<br>
 
