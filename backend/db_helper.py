@@ -105,3 +105,61 @@ def get_total_order_price(order_id):
     cursor.close()
 
     return result
+
+
+# Function to get the next available order_id
+def get_next_order_id():
+    """
+    Retrieve the next available order ID from the database.
+    
+    Returns:
+    - int: The next available order ID.
+    """
+    cursor = cnx.cursor()
+
+    # Executing the SQL query to get the next available order_id
+    query = "SELECT MAX(order_id) FROM orders"
+    cursor.execute(query)
+
+    # Fetching the result
+    result = cursor.fetchone()[0]
+
+    # Closing the cursor
+    cursor.close()
+
+    # Returning the next available order_id
+    if result is None:
+        return 1
+    else:
+        return result + 1
+
+# Function to fetch the order status from the order_tracking table
+def get_order_status(order_id):
+    """
+    Retrieve the order status for a given order ID from the order_tracking table in the database.
+    
+    Parameters:
+    - order_id (int): The ID of the order.
+    
+    Returns:
+    - str or None: The order status if found, otherwise None.
+    """
+    cursor = cnx.cursor()
+
+    # Executing the SQL query to fetch the order status
+    query = f"SELECT status FROM order_tracking WHERE order_id = {order_id}"
+    cursor.execute(query)
+
+    # Fetching the result
+    result = cursor.fetchone()
+
+    # Closing the cursor
+    cursor.close()
+
+    # Returning the order status
+    if result:
+        return result[0]
+    else:
+        return None
+
+
