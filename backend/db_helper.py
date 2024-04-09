@@ -163,3 +163,17 @@ def get_order_status(order_id):
         return None
 
 
+if __name__ == "__main__":
+    
+    # Example usage of get_total_order_price function
+    # print(get_total_order_price(56))
+    
+    # Example usage of insert_order_item function
+    # insert_order_item('Samosa', 3, 99)
+    # insert_order_item('Pav Bhaji', 1, 99)
+    
+    # Example usage of insert_order_tracking function
+    # insert_order_tracking(99, "in progress")
+    
+    # Example usage of get_next_order_id function
+    print(get_next_order_id())
