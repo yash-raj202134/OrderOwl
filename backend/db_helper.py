@@ -1,5 +1,4 @@
 # Database helper functions
-
 import mysql.connector
 global cnx
 
